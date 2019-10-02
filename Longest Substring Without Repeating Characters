@@ -1,5 +1,6 @@
-/*用Sliding Window(滑動窗口的觀念) 一個start指針+end指針尋找最長不重複之子字串*/
-
+/*用Sliding Window(滑動窗口的觀念) 一個start指針+end指針尋找最長不重複之子字串
+使用HashMap 協助計算結尾索引值
+*/
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int answer = 0;        
@@ -14,7 +15,7 @@ class Solution {
             }
            
             answer = answer> i-start+1 ? answer:i-start+1; //最長子字串長度 = 要輸出的答案
-            map.put(s.charAt(i),i+1);
+            map.put(s.charAt(i),i+1); //放入HashMap中，以 i+1 取出start 與 end 之間隔，意義在於最短不重複子字串為1(若字串s.length()>=1)
            
         }
         return answer;
