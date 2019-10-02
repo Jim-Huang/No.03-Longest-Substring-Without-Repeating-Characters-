@@ -15,7 +15,7 @@ class Solution {
             }
            
             answer = answer> i-start+1 ? answer:i-start+1; //最長子字串長度 = 要輸出的答案
-            map.put(s.charAt(i),i+1); //放入HashMap中，以 i+1 取出start 與 end 之間隔，意義在於最短不重複子字串為1(若字串s.length()>=1)
+            map.put(s.charAt(i),i+1); //放入HashMap中，以 i+1 取出 start 與 end(i) 之間隔 [於最短不重複子字串為1(若字串s.length()>=1)]
            
         }
         return answer;
