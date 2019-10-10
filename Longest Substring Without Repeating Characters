@@ -10,7 +10,7 @@ class Solution {
             char first = s.charAt(i);   // first 為現在要判斷的字元
             if(map.containsKey(first)){
                 start=map.get(first)>start?map.get(first):start; 
-                //用map.get(first)取得first的索引值
+                //用map.get(first)取得key=>first所對應的value值
                 //與自己(start)比較大小意義=>要找到最右邊的索引位置
             }
            
